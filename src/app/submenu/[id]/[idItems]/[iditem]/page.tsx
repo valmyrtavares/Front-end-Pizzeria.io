@@ -1,13 +1,15 @@
-type PageParams = {
-    params:{
-        id:string
+import Item from "@/components/item"
+
+type PageParams = {    params:{
+      
+        iditem:string
     }
 }
 
 export default function SubmenuPage({params}:PageParams){  
     return(
-        <main>          
-           <p>{params.id}</p>
+        <main>                    
+            <Item  idItem={params.iditem}/>
         </main>
     )
 }

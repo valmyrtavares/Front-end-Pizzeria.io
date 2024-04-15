@@ -37,7 +37,7 @@ const Submenu: React.FC<SubmenuProps> = ({ id }) => {
     
       React.useEffect(() => {
         const filteredData = data.filter(item => item.parent === id)
-        setFilterBtn(filteredData)        
+        setFilterBtn(filteredData) 
     }, [data, id])
 
     return(
@@ -46,7 +46,7 @@ const Submenu: React.FC<SubmenuProps> = ({ id }) => {
           <SuportMenusPage/>
             {filteBtn.map((btn: BtnMenu) => (
                 <div className="btn" key={btn.id}>
-                    <button><Link href={`/submenu/${id}/pizzas`}
+                    <button><Link href={`/submenu/${id}/${btn.category}`}
                     >{btn.title}</Link></button>
                 </div>
             ))

@@ -1,5 +1,5 @@
 import Submenu from "@/components/SubButton"
-import ItemsPage from "@/components/itemList"
+import ItemsPage from "@/components/itemsList"
 import SuportMenusPage from "@/components/suportMenus"
 
 // Pagina de produtos (items)
@@ -13,9 +13,7 @@ type PageParams = {
 export default function SubmenuPage({params}:PageParams){  
     return(
         <main>     
-            <SuportMenusPage/>     
-            <p>{params.idItems}</p>
-            <p>{params.id}</p>
+            <SuportMenusPage/> 
            <ItemsPage id={params.id} idItems={params.idItems}/>
         </main>
     )
